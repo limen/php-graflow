@@ -1,8 +1,6 @@
 <?php
 
-namespace Limen\Nodeflow;
-
-use Limen\Nodeflow\Contracts\FlowWatcherInterface;
+namespace Limen\Nodeflow\Contracts;
 
 /**
  * Author:      limengxiang
@@ -17,17 +15,17 @@ abstract class BaseNodeFlow
     protected $watchers = [];
 
     /**
-     *
-     * node1 is the head node, it has two child nodes, node2 and node3
-     * node6 are the tail node
-     *
-     * @return array
+     * @return BaseNodeGraph
      */
-    abstract protected function getNodeGraph();
+    abstract public function getNodeGraph();
 
-    abstract function doGoForwardStuff($position);
-
-    abstract function doGoBackwardStuff($position);
+    /**
+     * Do your business here
+     *
+     * @param $position
+     * @return bool True when succeed or false
+     */
+    abstract protected function doMoveStuff($position);
 
     /**
      * @param FlowWatcherInterface $watcher
@@ -80,55 +78,29 @@ abstract class BaseNodeFlow
      */
     public function getCurrentPosition()
     {
-
+        return $this->getNodeGraph()->getCurrentPosition();
     }
 
-    public function goForward($position)
+    public function moveTo($position)
     {
         $currPosition = $this->getCurrentPosition();
 
         $this->beforeMove($currPosition, $position);
 
-        $this->doGoForwardStuff($position);
+        if ($this->doMoveStuff($position)) {
+            $this->getNodeGraph()->setCurrentPosition($position);
 
-        $this->afterMove($currPosition, $position);
-    }
-
-    public function goBackward($position)
-    {
-        $currPosition = $this->getCurrentPosition();
-
-        $this->beforeMove($currPosition, $position);
-
-        $this->doGoBackwardStuff($position);
-
-        $this->afterMove($currPosition, $position);
+            $this->afterMove($currPosition, $position);
+        }
     }
 
     /**
      * @param $position
      * @return bool
      */
-    public function canGoForwardTo($position)
+    public function canMoveTo($position)
     {
-
-    }
-
-    /**
-     * @param $position
-     * @return bool
-     */
-    public function canGoBackwardTo($position)
-    {
-
-    }
-
-    /**
-     * @return bool
-     */
-    public function isAtEnd()
-    {
-
+        return $this->getNodeGraph()->canMoveTo($position);
     }
 
     /**
@@ -136,7 +108,15 @@ abstract class BaseNodeFlow
      */
     public function isAtStart()
     {
+        return $this->getNodeGraph()->isAtStart();
+    }
 
+    /**
+     * @return bool
+     */
+    public function isAtEnd()
+    {
+        return $this->getNodeGraph()->isAtEnd();
     }
 
     /**
@@ -145,7 +125,7 @@ abstract class BaseNodeFlow
      */
     public function isAtPosition($position)
     {
-
+        return $this->getNodeGraph()->isAtPosition($position);
     }
 
     /**
