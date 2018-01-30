@@ -15,11 +15,13 @@ A simple flow controller with features
 
 ### In/Out node
 
-Node A has way to node B. A is B's in node and B is A's out node. 
+When node A has way to node B, A is B's in node and B is A's out node. 
 
 ## Contract
 
 ### Define a graph in PHP array
+
+The first key must be the head node.
 
 ```PHP
 [
@@ -32,7 +34,7 @@ Node A has way to node B. A is B's in node and B is A's out node.
 ]
 ```
 
-The equivalent graph. 
+The equivalent graph 
  
 ![graph](https://github.com/limen/resources/blob/master/graph.png)
 
