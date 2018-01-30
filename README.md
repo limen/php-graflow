@@ -2,14 +2,19 @@
 
 A simple flow controller with features
 
-* Every state is a node.
-* A flow have one head node and one or multiple tail nodes.
+* A flow is defined by a graph.
+* A graph is consisted of nodes and edges.
+* Edges have direction.
+* A graph can have one head node and one or multiple tail nodes.
 * A middle node is a node who is neither head node nor tail node.
-* An tail node can have one or multiple in nodes and have no out node.
+* A tail node can have one or multiple in nodes and have no out node.
 * A head node can have one or multiple out nodes and have no in node.
 * A middle node can have one or multiple in node and one or multiple out nodes.
-* The road between two adjacent nodes could be one way or two way
+* The edge between two adjacent nodes could be one way or two way.
 
+## Usage
+
+see **src/Examples** and **tests/**
 
 ## Concepts
 
