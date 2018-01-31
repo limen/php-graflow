@@ -15,6 +15,14 @@ A simple flow controller with features
 * A middle node can have one or multiple in node and one or multiple out nodes.
 * The edge between two adjacent nodes could be one way or two way.
 
+## Install
+
+Recommend to install via [composer](https://getcomposer.org/ "").
+
+```bash
+composer require "limen/php-graflow"
+```
+
 ## Usage
 
 see **src/Examples** and **tests/**
