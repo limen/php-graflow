@@ -7,13 +7,13 @@
 
 namespace Limen\Nodeflow\Examples;
 
-use Limen\Nodeflow\Contracts\BaseNodeGraph;
+use Limen\Nodeflow\Contracts\BaseGraph;
 
 /**
- * Class PaperNodeGraph
+ * Class PaperGraph
  * @package Limen\Nodeflow\Examples
  */
-class PaperNodeGraph extends BaseNodeGraph
+class PaperGraph extends BaseGraph
 {
     public function getNodeGraph()
     {

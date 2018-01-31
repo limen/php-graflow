@@ -7,7 +7,7 @@ namespace Limen\Nodeflow\Contracts;
  * Email:       limengxiang@kuainiugroup.com
  * Created at:  2018/1/29
  */
-abstract class BaseNodeFlow
+abstract class BaseFlow
 {
     /**
      * @var FlowWatcherInterface[]
@@ -15,7 +15,7 @@ abstract class BaseNodeFlow
     protected $watchers = [];
 
     /**
-     * @return BaseNodeGraph
+     * @return BaseGraph
      */
     abstract public function getNodeGraph();
 

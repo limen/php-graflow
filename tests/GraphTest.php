@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Limen\Nodeflow\Examples\PaperNodeGraph;
+use Limen\Nodeflow\Examples\PaperGraph;
 
 class GraphTest extends TestCase
 {
     public function testMove()
     {
-        $graph = new PaperNodeGraph();
+        $graph = new PaperGraph();
         $head = $graph->getHeadNode();
 
         $this->assertEquals('blank', $head);

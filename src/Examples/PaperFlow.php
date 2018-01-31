@@ -7,23 +7,23 @@
 
 namespace Limen\Nodeflow\Examples;
 
-use Limen\Nodeflow\Contracts\BaseNodeFlow;
-use Limen\Nodeflow\Contracts\BaseNodeGraph;
+use Limen\Nodeflow\Contracts\BaseFlow;
+use Limen\Nodeflow\Contracts\BaseGraph;
 
 /**
  * Class PaperFlow
  * @package Limen\Nodeflow\Examples
  */
-class PaperFlow extends BaseNodeFlow
+class PaperFlow extends BaseFlow
 {
     /**
-     * @var BaseNodeGraph
+     * @var BaseGraph
      */
     protected $graph;
 
     public function __construct()
     {
-        $this->graph = new PaperNodeGraph();
+        $this->graph = new PaperGraph();
 
         $this->graph->setCurrentPosition('draft');
     }

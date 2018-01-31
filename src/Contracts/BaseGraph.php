@@ -8,10 +8,10 @@
 namespace Limen\Nodeflow\Contracts;
 
 /**
- * Class BaseNodeGraph
+ * Class BaseGraph
  * @package Limen\Nodeflow\Contracts
  */
-abstract class BaseNodeGraph
+abstract class BaseGraph
 {
     /**
      * @var string

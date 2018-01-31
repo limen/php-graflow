@@ -1,4 +1,4 @@
-# Nodeflow
+# Graflow
 
 A simple flow controller with features
 
