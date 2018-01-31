@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Limen\Nodeflow\Examples\PaperGraph;
+use Limen\Graflow\Examples\PaperGraph;
 
 class GraphTest extends TestCase
 {

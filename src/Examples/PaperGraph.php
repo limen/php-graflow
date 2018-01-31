@@ -5,13 +5,13 @@
  * Created at:  2018/1/30
  */
 
-namespace Limen\Nodeflow\Examples;
+namespace Limen\Graflow\Examples;
 
-use Limen\Nodeflow\Contracts\BaseGraph;
+use Limen\Graflow\Contracts\BaseGraph;
 
 /**
  * Class PaperGraph
- * @package Limen\Nodeflow\Examples
+ * @package Limen\Graflow\Examples
  */
 class PaperGraph extends BaseGraph
 {

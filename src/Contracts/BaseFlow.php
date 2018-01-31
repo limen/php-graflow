@@ -1,6 +1,6 @@
 <?php
 
-namespace Limen\Nodeflow\Contracts;
+namespace Limen\Graflow\Contracts;
 
 /**
  * Author:      limengxiang
@@ -17,7 +17,7 @@ abstract class BaseFlow
     /**
      * @return BaseGraph
      */
-    abstract public function getNodeGraph();
+    abstract public function getGraph();
 
     /**
      * Do your business here
@@ -78,7 +78,7 @@ abstract class BaseFlow
      */
     public function getCurrentPosition()
     {
-        return $this->getNodeGraph()->getCurrentPosition();
+        return $this->getGraph()->getCurrentPosition();
     }
 
     public function moveTo($position)
@@ -88,7 +88,7 @@ abstract class BaseFlow
         $this->beforeMove($currPosition, $position);
 
         if ($this->doMoveStuff($position)) {
-            $this->getNodeGraph()->setCurrentPosition($position);
+            $this->getGraph()->setCurrentPosition($position);
 
             $this->afterMove($currPosition, $position);
         }
@@ -100,7 +100,7 @@ abstract class BaseFlow
      */
     public function canMoveTo($position)
     {
-        return $this->getNodeGraph()->canMoveTo($position);
+        return $this->getGraph()->canMoveTo($position);
     }
 
     /**
@@ -108,7 +108,7 @@ abstract class BaseFlow
      */
     public function isAtStart()
     {
-        return $this->getNodeGraph()->isAtStart();
+        return $this->getGraph()->isAtStart();
     }
 
     /**
@@ -116,7 +116,7 @@ abstract class BaseFlow
      */
     public function isAtEnd()
     {
-        return $this->getNodeGraph()->isAtEnd();
+        return $this->getGraph()->isAtEnd();
     }
 
     /**
@@ -125,7 +125,7 @@ abstract class BaseFlow
      */
     public function isAtPosition($position)
     {
-        return $this->getNodeGraph()->isAtPosition($position);
+        return $this->getGraph()->isAtPosition($position);
     }
 
     /**

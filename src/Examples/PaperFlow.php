@@ -5,14 +5,14 @@
  * Created at:  2018/1/30
  */
 
-namespace Limen\Nodeflow\Examples;
+namespace Limen\Graflow\Examples;
 
-use Limen\Nodeflow\Contracts\BaseFlow;
-use Limen\Nodeflow\Contracts\BaseGraph;
+use Limen\Graflow\Contracts\BaseFlow;
+use Limen\Graflow\Contracts\BaseGraph;
 
 /**
  * Class PaperFlow
- * @package Limen\Nodeflow\Examples
+ * @package Limen\Graflow\Examples
  */
 class PaperFlow extends BaseFlow
 {
@@ -28,14 +28,14 @@ class PaperFlow extends BaseFlow
         $this->graph->setCurrentPosition('draft');
     }
 
-    public function getNodeGraph()
+    public function getGraph()
     {
         return $this->graph;
     }
 
     protected function doMoveStuff($position)
     {
-        $currPosition = $this->getNodeGraph()->getCurrentPosition();
+        $currPosition = $this->getGraph()->getCurrentPosition();
 
         echo "Move from #$currPosition# to #$position# \n";
 

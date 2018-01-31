@@ -1,6 +1,6 @@
 <?php
 
-namespace Limen\Nodeflow\Contracts;
+namespace Limen\Graflow\Contracts;
 
 /**
  * Author:      limengxiang

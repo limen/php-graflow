@@ -1,12 +1,12 @@
 {
-  "name": "limen/nodeflow",
+  "name": "limen/php-graflow",
   "description": "A simple node flow controller",
   "type": "library",
   "keywords": [
     "state-machine",
     "workflow"
   ],
-  "homepage": "https://github.com/limen/nodeflow",
+  "homepage": "https://github.com/limen/php-graflow",
   "authors": [
     {
       "name": "LI Mengxiang",
@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Limen\\Nodeflow\\": "src/"
+      "Limen\\Graflow\\": "src/"
     }
   }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Limen\Nodeflow\Examples\PaperFlow;
+use Limen\Graflow\Examples\PaperFlow;
 
 class PaperFlowTest extends TestCase
 {

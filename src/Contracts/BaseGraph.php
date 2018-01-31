@@ -5,11 +5,11 @@
  * Created at:  2018/1/30
  */
 
-namespace Limen\Nodeflow\Contracts;
+namespace Limen\Graflow\Contracts;
 
 /**
  * Class BaseGraph
- * @package Limen\Nodeflow\Contracts
+ * @package Limen\Graflow\Contracts
  */
 abstract class BaseGraph
 {
