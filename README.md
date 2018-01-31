@@ -1,5 +1,8 @@
 # Graflow
 
+[![Build Status](https://travis-ci.org/limen/php-graflow.svg?branch=master)](https://travis-ci.org/limen/php-graflow)
+[![Packagist](https://img.shields.io/packagist/l/limen/php-graflow.svg?maxAge=2592000)](https://packagist.org/packages/limen/php-graflow)
+
 A simple flow controller with features
 
 * A flow is defined by a graph.
